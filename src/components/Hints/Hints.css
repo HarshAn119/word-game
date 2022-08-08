@@ -1,0 +1,30 @@
+.hints__container {
+  background-color: #dde2f7d6;
+  border-radius: 5px;
+  padding: 1.2rem;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hints__container--stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.hints__reveal--btn {
+  border: 2px solid transparent;
+  margin: 20px;
+}
+
+.hints__reveal--btn:active {
+  border: 2px solid #02345c;
+}

@@ -1,0 +1,9 @@
+.history__container {
+  width: 30vw;
+  background-color: #dde2f7d6;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
