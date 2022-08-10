@@ -3,7 +3,7 @@ import { getWord } from './api/api';
 import Hints from './components/Hints/Hints';
 import History from './components/History/History';
 import UserInput from './components/UserInput/UserInput';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateWordData } from './redux/reducers/wordReducer';
 import { message } from 'antd';
 import './App.css';
@@ -17,19 +17,22 @@ const warning = (text) => {
 };
 
 const App = () => {
+  let score = useSelector((state) => state.wordReducer.data.score); //redux store
   const dispatch = useDispatch();
-  const [newWord, setNewWord] = useState(0);
-  const [score, setScore] = useState(0);
-  const [answer, setAnswer] = useState(null);
 
-  useEffect(() => {
-    wordData();
-  }, [newWord]);
+  const [newWord, setNewWord] = useState(0); // reset the game
+  const [answer, setAnswer] = useState(null); // check the answer
 
   const wordData = async () => {
+    // get new word data from API
     let wordDetails = await getWord();
     dispatch(updateWordData(wordDetails));
   };
+
+  useEffect(() => {
+    wordData();
+    setAnswer(null);
+  }, [newWord]);
 
   return (
     <div className="App">
@@ -42,11 +45,7 @@ const App = () => {
         <h1>Word Game</h1>
       </header>
       <h1 className="score">{score}</h1>
-      <UserInput
-        setNewWord={setNewWord}
-        setScore={setScore}
-        setAnswer={setAnswer}
-      />
+      <UserInput setNewWord={setNewWord} setAnswer={setAnswer} />
       <div className="App__description">
         <Hints />
         <History />
