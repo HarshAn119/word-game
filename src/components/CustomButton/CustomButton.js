@@ -4,7 +4,7 @@ import './CustomButton.css';
 const CustomButton = ({ className, text, onClick }) => {
   return (
     <>
-      <button onClick={onClick} className={className}>
+      <button id="customButton" onClick={onClick} className={className}>
         {text}
       </button>
     </>

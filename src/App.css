@@ -10,6 +10,7 @@
     #023761
   );
   font-family: 'varinonormal';
+  position: relative;
 }
 
 .App__description {
@@ -31,4 +32,13 @@
   font-weight: 300;
   letter-spacing: 2rem;
   text-transform: uppercase;
+}
+
+.score {
+  color: #fff;
+  font-size: 4rem;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 3rem;
 }

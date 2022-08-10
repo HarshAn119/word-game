@@ -16,7 +16,7 @@
 }
 
 .form__desc {
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   padding: 2rem;
   display: flex;
   flex-direction: column-reverse;
@@ -24,9 +24,13 @@
   align-items: center;
 }
 
+.form__label {
+  font-size: 2rem;
+}
+
 .form__input {
   width: 500px;
-  height: 25px;
+  height: 50px;
   border-radius: 5px;
   padding: 10px 25px;
   box-shadow: 0.75rem 0.5rem #000;
@@ -35,7 +39,7 @@
 
 .form__input::-webkit-input-placeholder {
   font-family: 'varinonormal';
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .form__label {
