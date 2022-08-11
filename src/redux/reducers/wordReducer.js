@@ -28,6 +28,7 @@ const wordReducer = createSlice({
         word: state.data.word,
         revealState: state.data.revealState,
         apiData: state.data.apiData,
+        score: state.data.score,
       });
     },
     setHistory: (state, action) => {
@@ -35,6 +36,7 @@ const wordReducer = createSlice({
       state.data.word = loadHistory.word;
       state.data.revealState = loadHistory.revealState;
       state.data.apiData = loadHistory.apiData;
+      state.data.score = loadHistory.score;
     },
     updateScore: (state, action) => {
       let result = 0;

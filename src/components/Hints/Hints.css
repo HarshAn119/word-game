@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .hints__container--stats {
@@ -15,6 +15,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.hints__container--desc {
+  margin-top: 20px;
 }
 
 .hidden {

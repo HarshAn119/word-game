@@ -37,9 +37,9 @@ const App = () => {
   return (
     <div className="App">
       {answer === true
-        ? success('Correct !!')
+        ? success('Correct!! 10 points added to score')
         : answer === false
-        ? warning('Wrong guess')
+        ? warning('Wrong guess!! 2 points deducted')
         : ''}
       <header className="header">
         <h1>Word Game</h1>

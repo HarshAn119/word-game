@@ -13,15 +13,12 @@ const History = () => {
 
   return (
     <div className="history">
-      {/* <div className="history__container">
-        <button className="history__text">start</button>
-        <span className="history__points">20 pts</span>
-      </div> */}
       {data.map((ele, ind) => (
         <div className="history__container">
-          <button onClick={() => handleOnClick(ind)} className="history__text">
+          <button className="history__btn" onClick={() => handleOnClick(ind)}>
             {ele.word}
           </button>
+          <span className="history__points">{ele.score} pts</span>
         </div>
       ))}
     </div>

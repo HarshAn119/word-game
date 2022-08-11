@@ -15,6 +15,14 @@
   align-items: center;
 }
 
+.form__group {
+  width: 100%;
+  padding: 0rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .form__desc {
   font-size: 1.2rem;
   padding: 2rem;
