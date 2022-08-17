@@ -10,6 +10,7 @@ const ShowHints = ({ ind, pts, desc, hintDesc }) => {
   );
 
   const handleOnClick = () => {
+    if (revealState === true) return;
     if (desc === 'definiton') dispatch(updateScore('REVEAL_DEFINITION'));
     else if (desc === 'synonym') dispatch(updateScore('REVEAL_SYNONYM'));
     else if (desc === 'antonym') dispatch(updateScore('REVEAL_ANTONYM'));
