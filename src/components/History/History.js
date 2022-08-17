@@ -14,7 +14,7 @@ const History = () => {
   return (
     <div className="history">
       {data.map((ele, ind) => (
-        <div className="history__container">
+        <div className="history__container" onClick={() => handleOnClick(ind)}>
           <button className="history__btn" onClick={() => handleOnClick(ind)}>
             {ele.word}
           </button>
