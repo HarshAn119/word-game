@@ -6,8 +6,10 @@ import './Hints.css';
 const Hints = () => {
   let data = useSelector((state) => state.wordReducer.data.apiData);
 
+  let ind = -1;
   const renderArr = (displayArr, desc) => {
-    return displayArr?.map((def, ind) => {
+    return displayArr?.map((def) => {
+      ind++;
       let pts = 0;
       if (desc === 'definiton') pts = 3;
       else if (desc === 'synonym') pts = 2;
